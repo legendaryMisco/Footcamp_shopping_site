@@ -1,0 +1,55 @@
+{% load static %}
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container container--narrow">
+      <a href="/" class="header__logo">
+        <img src="{{pagelogo}}" alt="{{pageName}}" />
+      </a>
+      <nav class="header__nav">
+        <input type="checkbox" id="responsive-menu" />
+        <label for="responsive-menu" class="toggle-menu">
+          <span>Menu</span>
+          <div class="toggle-menu__lines"></div>
+        </label>
+        <ul class="header__menu">
+          <li class="header__menuItem"><a href="{% url 'home' %}">Home</a></li>
+          <li class="header__menuItem"><a href="{% url 'home' %}#product">Products</a></li>
+          <li class="header__menuItem"><a href="{% url 'home' %}#collection">shop</a></li>
+          <li class="header__menuItem"><a href="{% url 'home' %}#blog">blog</a></li>
+          <li class="header__menuItem"><a href="{% url 'contact' %}">Contact</a></li>
+
+          <li>
+            <a href="{% url 'account' %}">
+                <button style="background: transparent;border: none;">
+                  <img src="{% static 'images/person.svg' %}" style="width:30px;" alt="cart">
+                </button>
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'cart' %}">
+
+                <button style="background: transparent;border: none;">
+                  <img src="{% static 'images/cart.svg' %}" style="width:30px;" alt="cart">
+
+                    <data class="nav-action-text" value="318.00">
+                      <strong style=" margin-left: auto;
+                    font-size: 12px;
+                    background: orange;
+                    color: white;
+                    width: 18px;
+                    height: 18px;
+                    display: grid;
+                    place-items: center;
+                    border-radius: 50%;">
+                      {{total_cart}}
+                    </strong>
+                    </data>
+                </button>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
