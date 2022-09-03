@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if payment_status == 'success' %}
+<h1>{{payment_status}}</h1>
+{% else %}
+<p>Opps something went wrong</p>
+{% endif %}
+</body>
+</html>
